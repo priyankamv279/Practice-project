@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Budget Planner</title>
+    <style>
+       /* CSS for Team Budget Planner */
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/jpeg;base64,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'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: 100% 100%; 
+            color: #a176a5;
+        }
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Heading styles */
+h1, h3, p {
+    text-align: center;
+    color: #a176a5;
+}
+
+/* Form styles */
+form {
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="number"],
+button {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #9ace89;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 20px);
+}
+
+button {
+    background-color: #e3b2d4;
+    color: rgb(238, 246, 6);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #eda60c;
+}
+
+/* Budget Info styles */
+#budgetInfo {
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Team Budget Planner</h1>
+    <h3>Program Manager</h3>
+    <p>Add details:</p>
+    <!-- Create a form to input deal details -->
+    <form id="dealForm">
+        <!-- Deal details inputs -->
+        <input type="text" id="dealName" placeholder="Deal Name">
+        <input type="text" id="vendor" placeholder="Vendor">
+        <input type="number" id="expenses" placeholder="Expenses">
+        <button type="submit">Add Deal</button>
+    </form>
+
+    <!-- Display budget-related information -->
+    <div id="budgetInfo">
+    </div>
+
+    <!-- Include JavaScript file -->
+    <script src="budget.js"></script>
+</body>
+</html>
